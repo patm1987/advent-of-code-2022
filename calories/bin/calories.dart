@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:calories/calories.dart' as calories;
 import 'package:calories/calories.dart';
 
 Future<void> main(List<String> arguments) async {
@@ -11,5 +10,5 @@ Future<void> main(List<String> arguments) async {
   }
 
   var lines = await File(arguments[0]).readAsLines();
-  print('Most Calories: ${parseCalories(lines)}');
+  print('Most Calories: ${parseCalories(lines, elfCount: 3)}');
 }
